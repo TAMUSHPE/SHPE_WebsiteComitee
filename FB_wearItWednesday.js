@@ -3,12 +3,13 @@ function subtractDays(myDate,days) {
 }
 //need to make sure that the status if from that week.
 function ContainsArray(time, post_date){
+	post_date=post_date.split(" ");
 	for (var i = 0; i < time.length; i++) {
 		if (time[i].indexOf("0",0) == 0) { 
 			time[i]=time[i][1]; time[i]=time[i]+",";
 		}
 
-		if (post_date.toLowerCase().indexOf(time[i].toLowerCase()) == -1)
+		if (post_date[i].toLowerCase().indexOf(time[i].toLowerCase()) == -1)
 			return false;
 	};
 	return true;
@@ -39,10 +40,11 @@ var keyTags = "wearitwednesday‬";
 var wensday = 3; //Date class representation for wednesday
 var namesOfPPl=[];
 var currentDay = new Date();
-currentDay=subtractDays(currentDay,15);
+//currentDay=subtractDays(currentDay,15);
 var dif = currentDay.getDay() - wensday;
 //ScrollTillGoal(subtractDays(currentDay, dif),dif);TODO Fix SCROLL
 //if you subtract to currentDay to the day you want to go bk and time to check who posted you can
+if (dif > 0)
 for (var i = tags.length-1; i >= 0; i--) {
 	var text=tags[i].innerHTML; //this retrieves whats inside the span such as  "wearitwednesday"
 	if (text.toLowerCase().indexOf(keyTags) != -1) //hashtag is keytags
