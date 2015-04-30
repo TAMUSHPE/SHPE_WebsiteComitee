@@ -43,7 +43,7 @@ currentDay=subtractDays(currentDay,15);
 var dif = currentDay.getDay() - wensday;
 //ScrollTillGoal(subtractDays(currentDay, dif),dif);TODO Fix SCROLL
 //if you subtract to currentDay to the day you want to go bk and time to check who posted you can
-for (var i = tags.length - 1; i >= 0; i--) {
+for (var i = tags.length-1; i >= 0; i--) {
 	var text=tags[i].innerHTML; //this retrieves whats inside the span such as  "wearitwednesday"
 	if (text.toLowerCase().indexOf(keyTags) != -1) //hashtag is keytags
 	{
@@ -57,11 +57,11 @@ for (var i = tags.length - 1; i >= 0; i--) {
 			//looks for the child node with class ("_3dp a") and gets the text which is the name of the user
 			//var name=tempNode.querySelector("._3dp a").text	
 			var names=[].slice.call(tempNode.querySelectorAll("._3dp a"));
-			for (var i = 0; i < names.length; i++) {
-				if (names[i].className != undefined)
-				if (names[i].className == "profileLink") 
+			for (var x = 0; x < names.length; x++) {
+				if (names[x].className != undefined)
+				if (names[x].className == "profileLink") 
 				{
-					namesOfPPl.push(names[i].text);
+					namesOfPPl.push(names[x].text);
 				}
 				
 			};
