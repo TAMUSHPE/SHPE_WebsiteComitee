@@ -23,6 +23,7 @@ function ScrollTillGoal(GoalDay, dif){
 	//if goalDate is on screen already meaning the date is older than current date
 	do
 	{
+		GoalDay.setHours(0,0,0,0);
 		scrollDown();
 		var PostDaysArray =document.querySelectorAll("._5pcq abbr");
 		var date= PostDaysArray[PostDaysArray.length-1].title.split(" ");//Need 1,2,3
@@ -30,19 +31,18 @@ function ScrollTillGoal(GoalDay, dif){
 		console.log("scroll");
 		console.log(GoalDay);
 		console.log(new Date(temp));
-		console.log((GoalDay > new Date(temp)));
-	}while((GoalDay > new Date(temp))== false);
+		console.log((GoalDay <= new Date(temp)));
+	}while((GoalDay <= new Date(temp)) != false);
 }
-
 //retrives all posts with hashtags that say wearitwednesday
 var tags =document.getElementsByClassName("_58cm");
 var keyTags = "wearitwednesday‬";
 var wensday = 3; //Date class representation for wednesday
 var namesOfPPl=[];
 var currentDay = new Date();
-//currentDay=subtractDays(currentDay,15);
+//currentDay=subtractDays(currentDay,5);
 var dif = currentDay.getDay() - wensday;
-//ScrollTillGoal(subtractDays(currentDay, dif),dif);TODO Fix SCROLL
+//ScrollTillGoal(subtractDays(currentDay, dif),dif);//TODO Fix SCROLL can't fix this
 //if you subtract to currentDay to the day you want to go bk and time to check who posted you can
 if (dif > 0)
 for (var i = tags.length-1; i >= 0; i--) {
