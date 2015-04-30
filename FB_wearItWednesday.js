@@ -13,16 +13,38 @@ function ContainsArray(time, post_date){
 	};
 	return true;
 }
+function scrollDown () {
+	var scrolly=document.body.scrollHeight;
+	window.scrollTo(0,scrolly);
+}
+
+function ScrollTillGoal(GoalDay, dif){
+	//if goalDate is on screen already meaning the date is older than current date
+	do
+	{
+		scrollDown();
+		var PostDaysArray =document.querySelectorAll("._5pcq abbr");
+		var date= PostDaysArray[PostDaysArray.length-1].title.split(" ");//Need 1,2,3
+		var temp=date[1]+" "+date[2]+" "+date[3];
+		console.log("scroll");
+		console.log(GoalDay);
+		console.log(new Date(temp));
+		console.log((GoalDay > new Date(temp)));
+	}while((GoalDay > new Date(temp))== false);
+}
+
 //retrives all posts with hashtags that say wearitwednesday
 var tags =document.getElementsByClassName("_58cm");
 var keyTags = "wearitwednesday‬";
 var wensday = 3; //Date class representation for wednesday
 var namesOfPPl=[];
 var currentDay = new Date();
-//if you subtract to currentDay to the day you want to go bk and time to check who posted you can
+currentDay=subtractDays(currentDay,15);
 var dif = currentDay.getDay() - wensday;
+//ScrollTillGoal(subtractDays(currentDay, dif),dif);TODO Fix SCROLL
+//if you subtract to currentDay to the day you want to go bk and time to check who posted you can
 for (var i = tags.length - 1; i >= 0; i--) {
-	text=tags[i].innerHTML; //this retrieves whats inside the span such as  "wearitwednesday"
+	var text=tags[i].innerHTML; //this retrieves whats inside the span such as  "wearitwednesday"
 	if (text.toLowerCase().indexOf(keyTags) != -1) //hashtag is keytags
 	{
 		//gets the mainPost Node
