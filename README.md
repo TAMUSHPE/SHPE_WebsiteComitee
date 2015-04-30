@@ -13,3 +13,4 @@ to make sure it finds all of the wearitwednesday.
 ##TestBank Ruby on Rails webpage hosted in heroku
 >[wire frame](https://wireframe.cc/MtjUhK)  
 >![wireframe](http://i.gyazo.com/1f807fd8e110cadd7535ebfc2fbc4365.png)
+>![wireframe pt2](http://i.gyazo.com/74b0e5720b4532a2690d476f46cfa46a.png)
