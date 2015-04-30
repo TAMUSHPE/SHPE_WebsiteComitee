@@ -33,8 +33,16 @@ for (var i = tags.length - 1; i >= 0; i--) {
 		if (ContainsArray(day, date)) //day posted was a wendsday
 		{
 			//looks for the child node with class ("_3dp a") and gets the text which is the name of the user
-			var name=tempNode.querySelector("._3dp a").text						
-	    	namesOfPPl.push(name);
+			//var name=tempNode.querySelector("._3dp a").text	
+			var names=[].slice.call(tempNode.querySelectorAll("._3dp a"));
+			for (var i = 0; i < names.length; i++) {
+				if (names[i].className != undefined)
+				if (names[i].className == "profileLink") 
+				{
+					namesOfPPl.push(names[i].text);
+				}
+				
+			};
 	    }
 	}
 };
