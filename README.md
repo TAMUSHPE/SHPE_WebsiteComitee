@@ -6,6 +6,8 @@ script that can be used to find people that posted that wednesday pictures for t
 >2. you need to scroll down till the dates on the posts are older than the wednesday
 to make sure it finds all of the wearitwednesday.   
 >3.Then you copy and paste script to console log (press f12) and copy n paste...
+>![first step](http://i.gyazo.com/97947de44845722355ffa1e8d47dd3b4.png)
+>![second step](http://i.gyazo.com/314d458d969947076b6bb018cf02c331.png)
 
 #Coming Soon
 ##wearitwednesday.js (Twitter script)
