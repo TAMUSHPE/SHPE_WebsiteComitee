@@ -40,7 +40,7 @@ var keyTags = "wearitwednesday‬";
 var wensday = 3; //Date class representation for wednesday
 var namesOfPPl=[];
 var currentDay = new Date();
-//currentDay=subtractDays(currentDay,5);
+//currentDay=subtractDays(currentDay,4);
 var dif = currentDay.getDay() - wensday;
 //ScrollTillGoal(subtractDays(currentDay, dif),dif);//TODO Fix SCROLL can't fix this
 //if you subtract to currentDay to the day you want to go bk and time to check who posted you can
@@ -58,14 +58,9 @@ for (var i = tags.length-1; i >= 0; i--) {
 		{
 			//looks for the child node with class ("_3dp a") and gets the text which is the name of the user
 			//var name=tempNode.querySelector("._3dp a").text	
-			var names=[].slice.call(tempNode.querySelectorAll("._3dp a"));
+			var names=[].slice.call(tempNode.querySelectorAll("._3dp .fcg .fcg a"));
 			for (var x = 0; x < names.length; x++) {
-				if (names[x].className != undefined)
-				if (names[x].className == "profileLink") 
-				{
 					namesOfPPl.push(names[x].text);
-				}
-				
 			};
 	    }
 	}
