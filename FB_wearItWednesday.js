@@ -56,8 +56,7 @@ for (var i = tags.length-1; i >= 0; i--) {
 		var day =newDay.toDateString().split(" ");
 		if (ContainsArray(day, date)) //day posted was a wendsday
 		{
-			//looks for the child node with class ("_3dp a") and gets the text which is the name of the user
-			//var name=tempNode.querySelector("._3dp a").text	
+			//looks for the child node with class ("_3dp a") and gets the text which is the name of the user	
 			var names=[].slice.call(tempNode.querySelectorAll("._3dp .fcg .fcg a"));
 			for (var x = 0; x < names.length; x++) {
 					namesOfPPl.push(names[x].text);
