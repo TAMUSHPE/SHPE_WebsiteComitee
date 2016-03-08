@@ -35,7 +35,7 @@ function ScrollTillGoal(GoalDay, dif){
 	}while((GoalDay <= new Date(temp)) != false);
 }
 //retrives all posts with hashtags that say wearitwednesday
-var tags =document.getElementsByClassName("_58cm");
+var tags =document.getElementsByClassName("_58cn");
 var keyTags = "wearitwednesday‬";
 var wensday = 3; //Date class representation for wednesday
 var namesOfPPl=[];
